@@ -3,6 +3,7 @@ import UiPageHeader from '../UI/PageHeader'
 import UiPageContent from '../UI/PageContent'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
+import StocksList from '../components/StocksList'
 
 const HomePage: React.FC = () => {
    return(
@@ -12,6 +13,7 @@ const HomePage: React.FC = () => {
          </UiPageHeader>
          <UiPageContent>
             <Banner/>
+            <StocksList/>
          </UiPageContent>
       </UiPage>
    )
