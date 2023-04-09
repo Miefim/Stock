@@ -1,0 +1,46 @@
+.pagination {
+   display: flex;
+   justify-content: space-between;
+   min-width: 100px;
+}
+
+.arrowButtonRightIcon {
+   transform: rotate(180deg);
+}
+
+.arrowButton {
+   cursor: pointer;
+   margin: 0 10px;
+   background: none;
+   border: none;
+}
+
+.arrowButton:disabled {
+   opacity: .2;
+}
+
+.pagination_window {
+   max-width: 270px;
+   overflow: hidden;
+}
+
+.window_tape {
+   display: flex;
+   width: fit-content;
+}
+
+.navUnit {
+   text-align: center;
+   margin: 0 5px;
+   cursor: default;
+   width: 20px;
+}
+
+.navUnit:hover {
+   color: rgb(255, 98, 98);
+   transition: .3s;
+}
+
+.activeUnit {
+   color: red;
+}
