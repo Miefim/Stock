@@ -22,13 +22,20 @@
    display: flex;
    align-items: center;
    padding: 0 10px;
-   width: 500px;
+   width: 250px;
+}
+
+.header_mediumColumn {
+   display: flex;
+   justify-content: center;
+   width: 100px;
+   border-right: 1px solid #fbfcff;
 }
 
 .header_smallColumn {
    display: flex;
    justify-content: center;
-   width: 61px;
+   width: 50px;
    border-right: 1px solid #fbfcff;
 }
 
@@ -69,4 +76,33 @@
 
 .noBorder {
    border: none;
+}
+
+.messageBlock {
+   width: 100%;
+   height: 400px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 50px;
+}
+
+.loaderSmall {
+   width: 50px;
+   height: 50px;
+   margin-right: 10px;
+}
+
+.loaderBig {
+   width: 200px;
+   height: 200px;
+}
+
+.green {
+   color: green;
+}
+
+.red {
+   color: red;
 }
