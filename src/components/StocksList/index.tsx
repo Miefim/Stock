@@ -55,12 +55,14 @@ const StocksList: React.FC = () => {
          <UiPageHeader className={style.list_header}>
             <div className={style.header_smallColumn}>№</div>
             <div className={style.header_bigColumn}>Company</div>
-            <div className={style.header_mediumColumn}>Symbol</div>
-            <div className={style.header_mediumColumn}>Currency</div>
-            <div className={style.header_mediumColumn}>Price</div>
-            <div className={style.header_mediumColumn}>Change</div>
-            <div className={style.header_mediumColumn}>Change,%</div>
-            <div className={`${style.header_mediumColumn} ${style.noBorder}`}>Date</div>
+            <div className={style.card_indicatorBlock}>
+               <div className={style.header_mediumColumn}>Symbol</div>
+               <div className={style.header_mediumColumn}>Currency</div>
+               <div className={style.header_mediumColumn}>Price</div>
+               <div className={style.header_mediumColumn}>Change</div>
+               <div className={style.header_mediumColumn}>Change,%</div>
+               <div className={`${style.header_mediumColumn} ${style.noBorder}`}>Date</div>
+            </div>
          </UiPageHeader>
          <DragDropContext onDragEnd={dragEndHandler}>
             <Droppable droppableId={style.list_content}>
@@ -89,12 +91,14 @@ const StocksList: React.FC = () => {
                                              }
                                              {stock.companyName}
                                           </div>
-                                          <div className={style.header_mediumColumn}>{stock.symbol}</div>
-                                          <div className={style.header_mediumColumn}>{stock.currency}</div>
-                                          <div className={style.header_mediumColumn}>{stock.latestPrice}</div>
-                                          <div className={`${style.header_mediumColumn} ${stock.change > 0 ? style.green : style.red}`}>{stock.change}</div>
-                                          <div className={`${style.header_mediumColumn} ${stock.changePercent > 0 ? style.green : style.red}`}>{stock.changePercent.toFixed(4)}</div>
-                                          <div className={`${style.header_mediumColumn} ${style.noBorder}`}>{stock.latestTime}</div>
+                                          <div className={style.card_indicatorBlock}>
+                                             <div className={style.header_mediumColumn}>{stock.symbol}</div>
+                                             <div className={style.header_mediumColumn}>{stock.currency}</div>
+                                             <div className={style.header_mediumColumn}>{stock.latestPrice}</div>
+                                             <div className={`${style.header_mediumColumn} ${stock.change > 0 ? style.green : style.red}`}>{stock.change}</div>
+                                             <div className={`${style.header_mediumColumn} ${stock.changePercent > 0 ? style.green : style.red}`}>{stock.changePercent?.toFixed(4)}</div>
+                                             <div className={`${style.header_mediumColumn} ${style.noBorder}`}>{stock.latestTime}</div>
+                                          </div>
                                        </div>
                                     )}
                                  </Draggable>

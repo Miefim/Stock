@@ -8,6 +8,7 @@
    display: block;
    opacity: 1;
    margin-top: 30px;
+   margin-left: -100px;
 }
 
 .popup_card {
@@ -22,4 +23,12 @@
 
 .card_image {
    margin-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+   
+   .navigate {
+      display: none;
+   }
+
 }

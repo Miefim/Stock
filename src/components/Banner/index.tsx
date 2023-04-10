@@ -4,6 +4,7 @@ import UiImage from '../../UI/Image'
 import style from './index.module.css'
 
 const Banner: React.FC = () => {
+   
    const [index, setIndex] = useState<number>(0)
 
    const increment = () => {
@@ -28,27 +29,24 @@ const Banner: React.FC = () => {
                of people around the world because it's simple, flexible, reliable!
             </h3>
             <div className={style.contentLeft_window}>
-               <div className={style.window_tape} style={{transform: `translateY(-${61 * index}px)`}}>
-                  <h1>Trade 24/7</h1>
-                  <h1>The best prices</h1>
-                  <h1>50+ years on the global market</h1>
+               <div className={style.window_tape} style={{transform: `translateY(-${80 * index}px)`}}>
+                  <h1 className={style.tape_unit}>Trade 24/7</h1>
+                  <h1 className={style.tape_unit}>The best prices</h1>
+                  <h1 className={style.tape_unit}>50+ years on the global market</h1>
                </div>
             </div>
          </div>
          <div className={style.banner_contentRight}>
             <UiImage 
-               url='/images/banner1.png' 
-               width='480px' 
+               url='/images/banner1.png'  
                className={`${style.contentRight_image} ${index === 0 && style.image_active}`}
             />
             <UiImage 
                url='/images/banner2.png' 
-               width='480px' 
                className={`${style.contentRight_image} ${index === 1 && style.image_active}`}
             />
             <UiImage 
                url='/images/banner3.png' 
-               width='480px' 
                className={`${style.contentRight_image} ${index === 2 && style.image_active}`}
             />
          </div>
