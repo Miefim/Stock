@@ -3,3 +3,11 @@
    min-height: 100vh;
    margin: 0 auto;
 }
+
+@media screen and (max-width: 1000px) {
+
+   .page {
+      width: 100vw
+   }
+
+}
