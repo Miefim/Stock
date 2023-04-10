@@ -46,7 +46,7 @@ const Navigate: React.FC = () => {
             </UiPopup>
          </NavButton>
          <NavButton onClick={(event) => navButtonClickHandler(event, 2)}>
-            <div>Rialto</div>
+            <div>Market</div>
             <UiPopup className={indexNavButton === 2 ? style.popup : ''}>
                <div className={style.popup_card}>
                   Super Stocks company 50 years on the binary options market!!!
